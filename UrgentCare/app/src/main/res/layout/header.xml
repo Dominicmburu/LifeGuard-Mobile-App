@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    app:title=""
+    android:background="@color/bot_back_color"
+    android:elevation="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp"
+            tools:ignore="UseCompoundDrawables"
+            android:layout_toLeftOf="@+id/setting">
+
+            <ImageView
+                android:id="@+id/toolbar_app_icon"
+                android:layout_width="50dp"
+                android:clickable="true"
+                android:layout_height="50dp"
+                android:src="@drawable/logo"
+                tools:ignore="ContentDescription"
+                android:focusable="true"
+                android:contentDescription="image"/>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginStart="60dp"
+                android:clickable="true"
+                android:text="LifeGuard"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:focusable="true" />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/baseline_settings_24"
+            android:backgroundTint="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="guide"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.appcompat.widget.Toolbar>

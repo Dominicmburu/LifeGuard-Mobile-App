@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:background="@drawable/recyclerback"
+    android:layout_marginTop="10dp"
+    android:elevation="12dp"
+    android:backgroundTint="@color/bot_back_color"
+    android:id="@+id/hospital_row">
+
+    <!-- Hospital Name -->
+    <TextView
+        android:id="@+id/tvHospitalName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Hospital Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingStart="5dp"
+        android:textColor="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"/>
+
+    <!-- Type -->
+    <TextView
+        android:id="@+id/tvHospitalType"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        android:textSize="16sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"/>
+
+    <!-- Distance -->
+    <TextView
+        android:id="@+id/tvHospitalDistance"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Distance"
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:paddingEnd="5dp"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

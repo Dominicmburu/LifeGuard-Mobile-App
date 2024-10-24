@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetingsActivity"
+    android:background="@color/back_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include
+            android:id="@+id/my_Setings_toolbar"
+            layout="@layout/settings_header" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/settingsRecy"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@+id/toolbarLayout"
+        tools:listitem="@layout/setttings_row"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="319dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="LOGOUT"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+
+    <ImageButton
+        android:id="@+id/logoutbtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/sos_button_background"
+        android:backgroundTint="@color/fab_color"
+        android:contentDescription="logout"
+        android:src="@drawable/baseline_logout_24" />
+
+
+
+</RelativeLayout>

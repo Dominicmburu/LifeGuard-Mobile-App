@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout-land/activity_register.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@color/back_color">
+
+    <ProgressBar
+        android:id="@+id/progressBarRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/leftColumn"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_marginRight="40dp">
+
+            <ImageView
+                android:id="@+id/logoLogo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/logo"
+                android:layout_centerHorizontal="true"/>
+
+            <!-- Register Button -->
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="316dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_bg"
+                android:text="Register"
+                android:textStyle="bold"
+                android:layout_below="@+id/logoLogo"/>
+
+            <!-- Go to Login -->
+            <TextView
+                android:id="@+id/textViewGoToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/buttonRegister"
+                android:layout_centerHorizontal="true"
+                android:text="Already have an account? Go to Login"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rightColumn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/leftColumn"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <!-- Username -->
+                <EditText
+                    android:id="@+id/editTextRegUsername"
+                    android:layout_width="316dp"
+                    android:layout_height="49dp"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:drawableLeft="@drawable/baseline_person_24"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/input_bg"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"/>
+
+                <!-- Email -->
+                <EditText
+                    android:id="@+id/editTextRegEmail"
+                    android:layout_width="316dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email"
+                    android:drawableLeft="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/input_bg"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"/>
+
+                <!-- Phone Number -->
+                <EditText
+                    android:id="@+id/editTextRegPhoneNumber"
+                    android:layout_width="316dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="20dp"
+                    android:inputType="phone"
+                    android:hint="Phone Number"
+                    android:drawableLeft="@drawable/baseline_phone_24"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/input_bg"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"/>
+
+                <!-- Password -->
+                <EditText
+                    android:id="@+id/editTextRegPassword"
+                    android:layout_width="316dp"
+                    android:layout_height="49dp"
+                    android:layout_marginTop="20dp"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:drawableLeft="@drawable/ic_baseline_security_24"
+                    android:drawableRight="@drawable/baseline_visibility_24"
+                    android:drawablePadding="10dp"
+                    android:background="@drawable/input_bg"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"/>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

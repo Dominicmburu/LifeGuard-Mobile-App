@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_rectangle"
+    android:padding="5dp"
+    android:layout_marginTop="12dp"
+    android:id="@+id/first_guide_row">
+
+    <TextView
+        android:id="@+id/first_guide_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:text="1"
+        android:textSize="22sp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/first_guide_rowText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/first_guide_number"
+        android:text="Realtime Database separately from the FirebaseUser object, you'll need to retrieve them from the database. Here's how you can modify the loadUserProfile method to fetch these details:"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_register.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@color/back_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include
+            android:id="@+id/registerNumbers_header"
+            layout="@layout/registernumbers_header" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_below="@+id/toolbarLayout">
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/editTextEmegName"
+            android:layout_width="316dp"
+            android:layout_height="49dp"
+            android:hint="Name"
+            android:inputType="text"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:drawablePadding="10dp"
+            android:background="@drawable/input_bg"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_centerHorizontal="true"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/editTextEmegPhoneNumber"
+            android:layout_width="316dp"
+            android:layout_height="49dp"
+            android:layout_below="@+id/editTextEmegName"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:hint="Phone"
+            android:drawableLeft="@drawable/baseline_phone_24"
+            android:drawablePadding="10dp"
+            android:background="@drawable/input_bg"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_centerHorizontal="true"/>
+
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/RegisterNewNumber"
+            android:layout_width="319dp"
+            android:layout_height="49dp"
+            android:layout_below="@+id/editTextEmegPhoneNumber"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/btn_bg"
+            android:text="Register Number"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <!-- Phone Number -->
+
+
+</RelativeLayout>

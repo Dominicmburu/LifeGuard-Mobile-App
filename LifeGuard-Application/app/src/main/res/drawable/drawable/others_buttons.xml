@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background shape with red color -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" /> <!-- Red color for the button background -->
+            <corners android:radius="75dp" /> <!-- Adjust the radius to make it circular -->
+        </shape>
+    </item>
+
+    <!-- White border-->
+    <item android:right="3dp" android:left="3dp" android:top="3dp" android:bottom="3dp">
+        <shape android:shape="oval">
+            <solid android:color="#020043" /> <!-- White color for the border -->
+            <corners android:radius="75dp" /> <!-- Adjust the radius to make it circular -->
+
+
+        </shape>
+
+
+    </item>
+
+</layer-list>

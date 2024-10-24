@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FriendsActivity"
+    android:background="@color/back_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include
+            android:id="@+id/friendsbar"
+            layout="@layout/friends_headers" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarLayout"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/upbuttons">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/registerLinear">
+
+
+                    <ImageButton
+                        android:id="@+id/gotoregisterNumbers"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_add_24"
+                        android:background="@drawable/rounded_rectangle"
+                        android:contentDescription="regbutton"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Register\nNumbers"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_toRightOf="@+id/registerLinear">
+
+                    <ImageButton
+                        android:id="@+id/gotoEditText"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/rounded_rectangle"
+                        android:src="@drawable/baseline_message_24"
+                        android:contentDescription="edit sos"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit SOS\nMessage"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/messmessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:textColor="@color/white"
+                android:layout_below="@+id/upbuttons"
+                android:textSize="18sp"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/messageDisplayView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/recyclerback"
+                android:layout_below="@id/messmessage"
+                android:text="Set your emergency message"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/regnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registered Numbers"
+                android:textColor="@color/white"
+                android:layout_below="@+id/messageDisplayView"
+                android:textSize="18sp"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/registeredNumbersView"
+                android:layout_below="@+id/regnum"
+                android:background="@drawable/recyclerback"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="15dp"
+                android:padding="15dp">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

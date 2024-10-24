@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_register.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@color/back_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include
+            android:id="@+id/editMessage_header"
+            layout="@layout/message_header" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarLayout"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        >
+
+        <!-- Username -->
+        <EditText
+
+            android:id="@+id/editTextMessage"
+            android:layout_width="316dp"
+            android:layout_height="200dp"
+            android:hint="Enter message here"
+            android:inputType="textMultiLine"
+            android:background="@drawable/recyclerback"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+
+        <!--         Character Count Text -->
+        <TextView
+            android:id="@+id/characterCountText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextMessage"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-25dp"
+            android:paddingEnd="54dp"
+            android:gravity="end"
+            android:text="0/45"
+            android:textColor="@color/white"/>
+
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/buttonSaveMessage"
+            android:layout_width="319dp"
+            android:layout_height="49dp"
+            android:layout_below="@+id/editTextMessage"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/btn_bg"
+            android:text="Save Message"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <!-- Phone Number -->
+
+
+</RelativeLayout>
